@@ -5,25 +5,10 @@ We begin by setting up a simple python project.
 `cd binary-search`{{execute}}
 `git init`{{execute}}
 
-Begin by cloning the following repo
 
-`git clone git@github.com:rymane/binary-search.git`{{execute}}
+Let's create a file with the code of binary search
 
-Step into the folder
-
-`cd binary-search`{{execute}}
-
-Start by creating a python file 
-
-`touch binarySearch.py`{{execute}}
-
-You can now see the new file
-
-`ls`{{executable}}
-
-Let's add the binary search
-
-<pre class="file" data-filename="binary-search.py" data-target="replace">
+<pre class="file" data-filename="binary-search/binary-search.py" data-target="replace">
 
 # Returns index of x in arr if present, else -1
 def binarySearch (arr, l, r, x):
