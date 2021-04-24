@@ -29,6 +29,7 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
+    "uieditorpath": "/root/katacoda",
     "imageid": "python:3.7"
   }
 }
