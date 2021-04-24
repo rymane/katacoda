@@ -1,6 +1,9 @@
 We begin by setting up a simple python project.
 
 ## Task
+`mkdir binary-search`{{execute}}
+`cd binary-search`{{execute}}
+`git init`{{execute}}
 
 Begin by cloning the following repo
 
