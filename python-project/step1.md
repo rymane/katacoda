@@ -4,15 +4,15 @@ We begin by setting up a simple python project.
 
 Begin by cloning the following repo
 
-`git clone git@github.com:rymane/binary-search.git`{{executable}}
+`git clone git@github.com:rymane/binary-search.git`{{execute}}
 
 Step into the folder
 
-`cd binary-search`{{executable}}
+`cd binary-search`{{execute}}
 
 Start by creating a python file 
 
-`touch binarySearch.py`{{executable}}
+`touch binarySearch.py`{{execute}}
 
 You can now see the new file
 
