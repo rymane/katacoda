@@ -1,14 +1,15 @@
 We begin by setting up a simple python project.
 
-## Task
+## Create the github folder
 `mkdir binary-search`{{execute}}
 `cd binary-search`{{execute}}
 `git init`{{execute}}
 
-
+## Implement python code
 Let's create a file with the code of binary search
 
 <pre class="file" data-filename="binary-search/binary-search.py" data-target="replace">
+# implementation from https://www.geeksforgeeks.org/binary-search/
 
 # Returns index of x in arr if present, else -1
 def binarySearch (arr, l, r, x):
@@ -44,11 +45,16 @@ x = 10
 result = binarySearch(arr, 0, len(arr)-1, x)
 
 if result != -1:
-print ("Element is present at index % d" % result)
+    print ("Element is present at index % d" % result)
 else:
-print ("Element is not present in array")
+    print ("Element is not present in array")
 </pre>
 
+Let's run the code:
+`python3 binary-search.py`{{execute}}
+
+Excellent! Now a project is often bigger than this with several files and folders but this is just for demonstration purposes.
+Not let's see how be can test our code. 
 
 
 
