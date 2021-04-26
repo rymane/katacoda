@@ -1,6 +1,8 @@
 We begin by setting up a simple python project.
 
 ## Create the github folder
+`mkdir search && cd search && git init`{{execute}}
+
 `mkdir search`{{execute}}
 `cd search`{{execute}}
 `git init`{{execute}}
@@ -36,22 +38,10 @@ def binarySearch (arr, l, r, x):
 	else:
 		# Element is not present in the array
 		return -1
-
-# Driver Code
-arr = [ 2, 3, 4, 10, 40 ]
-x = 10
-
-# Function call
-result = binarySearch(arr, 0, len(arr)-1, x)
-
-if result != -1:
-    print ("Element is present at index % d" % result)
-else:
-    print ("Element is not present in array")
 </pre>
 
 Let's run the code:
-`python3 binary-search.py`{{execute}}
+`python3 binarySearch.py`{{execute}}
 
 Excellent! Now a project is often bigger than this with several files and folders but this is just for demonstration purposes.
 Not let's see how be can test our code. 

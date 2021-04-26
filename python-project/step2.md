@@ -6,10 +6,10 @@ We will test  our  code with Pytest which is a ...
 ## Set up our first test
 Let's create a file with the code of binary search
 
-<pre class="file" data-filename="search/test.py" data-target="replace">
-from binarysearch import binarySearch
+<pre class="file" data-filename="search/test_binarySearch.py" data-target="replace">
+from binarySearch import binarySearch
 
-def findtwo():
+def test_findtwo():
     arr = [ 2, 3, 4, 10, 40 ]
     x = 2
     result = binarySearch(arr, 0, len(arr)-1, x)
@@ -17,8 +17,19 @@ def findtwo():
 </pre>
 
 Run the test:
+`pytest test_binarySearch`{{execute}}
+
+<pre class="file" data-filename="search/test_binarySearch.py" data-target="replace">
+from binarySearch import binarySearch
+
+def test_findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 5
+    result = binarySearch(arr, 0, len(arr)-1, x)
+    assert result == 0
+</pre>
+
+Run the test:
 `pytest`{{execute}}
-
-
 
 
