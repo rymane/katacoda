@@ -37,7 +37,7 @@ def bs (arr, l, r, x):
 </pre>
 
 Let's run the code:
-`python3 bs.py`{{execute}}
+`python3 binarySearch.py`{{execute}}
 
 Excellent! Now a project is often bigger than this with several files and folders but this is just for demonstration purposes.
 Not let's see how be can test our code. 
