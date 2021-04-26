@@ -1,14 +1,14 @@
 We begin by setting up a simple python project.
 
 ## Create the github folder
-`mkdir binary-search`{{execute}}
-`cd binary-search`{{execute}}
+`mkdir search`{{execute}}
+`cd binarySearch`{{execute}}
 `git init`{{execute}}
 
 ## Implement python code
 Let's create a file with the code of binary search
 
-<pre class="file" data-filename="Search/binarySearch.py" data-target="replace">
+<pre class="file" data-filename="search/binarySearch.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
 # Returns index of x in arr if present, else -1

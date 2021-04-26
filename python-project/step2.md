@@ -6,7 +6,7 @@ We will test  our  code with Pytest which is a ...
 ## Set up our first test
 Let's create a file with the code of binary search
 
-<pre class="file" data-filename="Search/test.py" data-target="replace">
+<pre class="file" data-filename="search/test.py" data-target="replace">
 from binarysearch import binarySearch
 
 def findtwo():
