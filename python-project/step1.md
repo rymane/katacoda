@@ -8,7 +8,7 @@ We begin by setting up a simple python project.
 ## Implement python code
 Let's create a file with the code of binary search
 
-<pre class="file" data-filename="binary-search/binary-search.py" data-target="replace">
+<pre class="file" data-filename="Search/binarySearch.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
 # Returns index of x in arr if present, else -1
