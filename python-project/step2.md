@@ -6,7 +6,7 @@ We will test  our  code with Pytest which is a ...
 ## Set up our first test
 Let's create a file with the code of binary search
 
-<pre class="file" data-filename="search/test_binarySearch.py" data-target="replace">
+<pre class="file" data-filename="search/test_bs.py" data-target="replace">
 from binarySearch import binarySearch
 
 def test_findtwo():
@@ -19,7 +19,7 @@ def test_findtwo():
 Run the test:
 `pytest test_binarySearch`{{execute}}
 
-<pre class="file" data-filename="search/test_binarySearch.py" data-target="replace">
+<pre class="file" data-filename="search/test_bs.py" data-target="append">
 from binarySearch import binarySearch
 
 def test_findtwo():
