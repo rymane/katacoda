@@ -2,7 +2,7 @@ We begin by setting up a simple python project.
 
 ## Create the github folder
 `mkdir search`{{execute}}
-`cd binarySearch`{{execute}}
+`cd search`{{execute}}
 `git init`{{execute}}
 
 ## Implement python code
