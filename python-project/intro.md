@@ -1,5 +1,6 @@
 ## Introduction
-Welcome to this tutorial about continuous integration workflow in a python project.
+Welcome to this tutorial about continuous integration in a python project.
+In this tutorial we will build a simple [python](https://www.python.org) project. We will use [pytest](https://docs.pytest.org/en/6.2.x/) which is a python framework used to write unit test easily.    
 
 ## Goal of this tutorial
 By the end of this tutorial you will have:

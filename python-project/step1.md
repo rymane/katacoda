@@ -1,6 +1,8 @@
-We begin by setting up a simple python project.
+We begin by setting up a simple python project. 
+We will implement binary search for demonstration purposes. 
 
 ## Create the github folder
+`git clone git@github.com:rymane/binary-search.git`{{execute}}
 `mkdir search && cd search && git init`{{execute}}
 
 ## Implement python code
