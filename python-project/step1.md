@@ -2,8 +2,7 @@ We begin by setting up a simple python project.
 We will implement binary search for demonstration purposes. 
 
 ## Create the github folder
-`git clone git@github.com:rymane/binary-search.git`{{execute}}
-`mkdir search && cd search && git init`{{execute}}
+`mkdir search && cd search`{{execute}}
 
 ## Implement python code
 Let's create a file with the code of binary search
