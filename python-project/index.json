@@ -1,18 +1,18 @@
 {
-  "title": "Creating Your First Katacoda Scenario",
-  "description": "Learn how to create your first Katacoda scenario",
+  "title": "Continuous integration for python project with PyTest and Travis-CI",
+  "description": "Learn how to create a simple python project that you test and build automatically with Travis-CI and PyTest",
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Scenario Structure",
+        "title": "Step 1 - Set up Python project",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Scenario Syntax",
+        "title": "Step 2 - Create tests",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - CLI",
+        "title": "Step 3 - Travis CI",
         "text": "step3.md"
       }
     ],
