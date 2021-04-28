@@ -1,5 +1,5 @@
 {
-  "title": "Continuous integration for python project with PyTest and Travis-CI",
+  "title": "Continuous integration for a Python project.",
   "description": "Learn how to create a simple python project that you test and build automatically with Travis-CI and PyTest",
   "details": {
     "steps": [
