@@ -39,7 +39,7 @@ def test_findtwo():
 Run the test:
 `pytest`{{execute}}
 
-Exactly, this test fails since 5 is not in the array, and we asserted it to be at index 0. Let's change that! 
+As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. Let's change that! 
 
 *Click copy to editor to create the file.*
 
