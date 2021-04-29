@@ -17,7 +17,7 @@ the **profile picture**, then click **Settings**, and the green **Activate** but
 
 ## Configure Travis 
 In order for Travis CI to work, the GitHub repo has to have a file named .travis.yml located in the root of the repository. 
-Follow the instructions below to create the .travis.yml file via terminal or Githubs interface from your browser.
+Follow the instructions below to create the .travis.yml file via your terminal or through Githubs interface from your browser.
 
 ### Using terminal
 Run the following command in your terminal to create the .travis file. 
