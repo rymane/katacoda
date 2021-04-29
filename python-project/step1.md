@@ -1,14 +1,14 @@
 We begin by setting up a simple python project. 
 We will implement binary search for demonstration purposes.
 
-## Implement python code
+## Implement Binary search
 Start by making a folder to place the project in.
 
 `mkdir search && cd search`{{execute}}
 
 Now, let's create a file with the code of binary search.
 
-*Click copy to editor to create the file.*
+*Click copy to Editor to create the file.*
 <pre class="file" data-filename="search/binarySearch.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
@@ -40,11 +40,12 @@ def bs (arr, l, r, x):
 </pre>
 
 Binary search takes an array, a start, an end and the number to search for as an input. 
-It returns the index where the number is found if it exists in the array, otherwise it returns -1
-This means that the code doesn't print anything, but we can still run it to see that it compiles and test 
+It returns the index where the number is found if it exists in the array, otherwise it returns -1.
+This means that the code doesn't print anything, but we can still run it to see that it compiles. We will then test 
 it in the next step. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
 
 Let's run the code:
+
 `python3 binarySearch.py`{{execute}}
 
 Excellent! 

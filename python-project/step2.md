@@ -1,12 +1,12 @@
-It is time to test the code to see that it actually do what we want it to.
+It is time to test the code to see that it is correct and actually does what we want it to.
 We will test our code with [pytest](https://docs.pytest.org/en/6.2.x/) which is a python framework used to write unit test easily.
 
 ## Install pytest
 `python -m pip install pytest`{{execute}}
 
 ## Set up our first test
-To test binary search we have to make sure to import it. Then let's write a test that creates an array, 
-and calls binary search to find number 2, which is at index 0. We then assert the result to be 0 since that's how 
+Let's write a test that creates an array, and calls binary search to find number 2, 
+which is at index 0. We then assert the result to be 0 since that's how 
 we want the results to be in order for the code to behave correctly.  
 
 *Click copy to editor to create the file.*
