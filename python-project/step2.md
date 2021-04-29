@@ -1,7 +1,7 @@
-It is time to test the code to see that it works correctly and actually does what we want it to.
-We will test our code with [pytest](https://docs.pytest.org/en/6.2.x/) which is a python framework used to write unit test easily.
+It is now time to test the code to see that it works correctly and actually does what we want it to.
+We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is a Python framework used to write unit test easily.
 
-## Install pytest
+## Install PyTest
 `python -m pip install pytest`{{execute}}
 
 ## Set up our first test
@@ -22,7 +22,7 @@ def test_findtwo():
 Run the test:
 `pytest`{{execute}}
 
-Great! The test passed. If we make a test that is searching for a number not in the array, 
+Great! The test passed. If we make a test that is searching for a number that is not included in the array, 
 still asserting the result to be 0 it should fail. Try it:
 
 *Click copy to Editor to create the file.*

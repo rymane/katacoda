@@ -4,7 +4,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Set up Python project",
+        "title": "Step 1 - Set up your Python project",
         "text": "step1.md"
       },
       {
