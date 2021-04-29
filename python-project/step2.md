@@ -23,7 +23,7 @@ Run the test:
 `pytest`{{execute}}
 
 Great! The test passed. If we make a test that is searching for a number that is not included in the array, 
-still asserting the result to be 0 it should fail. Try it:
+still asserting the result to be 0, it should fail. Try it:
 
 *Click copy to Editor to create the file.*
 
