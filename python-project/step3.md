@@ -1,4 +1,4 @@
-Great job! This far we have made a small python project and written unit tests for it.
+Good job! This far we have made a small Python project and written unit tests for it.
 Now it is time to set up [Travis CI](https://www.travis-ci.com) which is
 a service for continuous integrations, used to build and test our code automatically on every push.  
 
