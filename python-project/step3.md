@@ -5,7 +5,8 @@ a service for continuous integrations, used to build and test our code automatic
 If you have followed along this tutorial in your own repo, you can use it for this step. Otherwise,
 fork [this repo](https://github.com/rymane/binary-search/tree/project-start) to use in this step.
 You fork the repo by clicking the link and then pressing the button right under your profile picture saying "fork". 
-(You can go through the following steps in your browser by using the GitHub interface)
+
+You can go through the following steps from your terminal or in your browser by using the GitHub interface
 
 ## Connect Travis with your GitHub account
 First, you want to connect Travis CI to your GitHub account. 
