@@ -64,5 +64,5 @@ Run the test and make sure it doesn't fail:
 `pytest`{{execute}}
 
 These test are set up to succeed and fail since we *know* that the code is correct, 
-but what we usualy want to test is *if* the code is correct. Feel free to change some parts in 
+but what we usually want to test is *if* the code is correct. Feel free to change some parts in 
 the binarySearch file and run the tests to see if the change made the tests fail or not. 
