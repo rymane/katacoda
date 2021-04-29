@@ -1,4 +1,4 @@
-We begin by setting up a simple python project. 
+We begin by setting up a simple Python project. 
 We will implement binary search for demonstration purposes.
 
 ## Implement Binary search
