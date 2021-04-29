@@ -1,15 +1,14 @@
-It is time to test the code to see that it is correct and actually does what we want it to.
+It is time to test the code to see that it works correctly and actually does what we want it to.
 We will test our code with [pytest](https://docs.pytest.org/en/6.2.x/) which is a python framework used to write unit test easily.
 
 ## Install pytest
 `python -m pip install pytest`{{execute}}
 
 ## Set up our first test
-Let's write a test that creates an array, and calls binary search to find number 2, 
-which is at index 0. We then assert the result to be 0 since that's how 
-we want the results to be in order for the code to behave correctly.  
+Let's write a test that creates an array and calls binary search to find number 2, 
+which is at index 0. We then assert the result to be 0 since that's what we expect the results to be in order for the code to behave correctly.  
 
-*Click copy to editor to create the file.*
+*Click copy to Editor to create the file.*
 <pre class="file" data-filename="search/test_bs.py" data-target="replace">
 from binarySearch import *
 
@@ -26,7 +25,7 @@ Run the test:
 Great! The test passed. If we make a test that is searching for a number not in the array, 
 still asserting the result to be 0 it should fail. Try it:
 
-*Click copy to editor to create the file.*
+*Click copy to Editor to create the file.*
 
 <pre class="file" data-filename="search/test_bs.py" data-target="append">
 
