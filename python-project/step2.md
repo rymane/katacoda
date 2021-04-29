@@ -5,8 +5,8 @@ We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is 
 `python -m pip install pytest`{{execute}}
 
 ## Set up our first test
-Let's write a test that creates an array and calls binary search to find number 2, 
-which is at index 0. We then assert the result to be 0 since that's what we expect the results to be in order for the code to behave correctly.  
+Write a test that creates an array and calls binary search to find number 2, 
+which is at index 0. Assert the result to be 0 since that is what we expect the results to be in order for the code to behave correctly.  
 
 Click *Copy to Editor* to create the file.
 <pre class="file" data-filename="search/test_bs.py" data-target="replace">
@@ -39,9 +39,8 @@ def test_findtwo():
 Run the test:
 `pytest`{{execute}}
 
-As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. Let's change that! 
-
-Click *Copy to Editor*.
+As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. 
+Click *Copy to Editor* to change that!
 
 <pre class="file" data-filename="search/test_bs.py" data-target="replace">
 from binarySearch import *
@@ -59,7 +58,7 @@ def test_findtwo():
     assert result == -1
 </pre>
 
-Run the test and make sure it doesn't fail:
+Run the test and make sure it does not fail:
 
 `pytest`{{execute}}
 
