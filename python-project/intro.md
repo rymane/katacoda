@@ -1,7 +1,7 @@
 ## Introduction
-Welcome to this tutorial about continuous integration for a python project.
+Welcome to this tutorial about continuous integration for a Python project.
 In this tutorial, we will build a simple [Python](https://www.python.org) project and use [pytest](https://docs.pytest.org/en/6.2.x/) 
-which is a python framework used to write unit test easily. In the last step we will learn how to integrate [Travis CI](https://www.travis-ci.com) which is 
+which is a python framework used to easily write unit tests. In the last step we will learn how to integrate [Travis CI](https://www.travis-ci.com) which is 
 a service for continuous integrations. It is used to continuously build and test code on GitHub or Bitbucket. 
 
 ## Goal of this tutorial
