@@ -40,11 +40,9 @@ def bs (arr, l, r, x):
 </pre>
 
 Binary search takes an array, a start, an end and the number to search for as an input. 
-It returns the index where the number is found if it exists in the array, otherwise it returns -1.
-This means that the code doesn't print anything, but we can still run it to see that it compiles. We will then test 
-it in the next step. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
+It returns the index where the number is found if it exists in the array, otherwise it returns -1. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
 
-Let's run the code:
+Let's run the code and see that it compiles:
 
 `python3 binarySearch.py`{{execute}}
 
