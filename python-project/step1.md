@@ -8,7 +8,7 @@ Start by making a folder to place the project in.
 
 Now, let's create a file with the code of binary search.
 
-*Click copy to Editor to create the file.*
+Click *Copy to Editor* to create the file.
 <pre class="file" data-filename="search/binarySearch.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
