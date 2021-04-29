@@ -25,7 +25,7 @@ Run the test:
 Great! The test passed. If we make a test that is searching for a number that is not included in the array, 
 still asserting the result to be 0, it should fail. Try it:
 
-Click *Copy to Editor* to create the file.
+Click *Copy to Editor*.
 
 <pre class="file" data-filename="search/test_bs.py" data-target="append">
 
@@ -41,7 +41,7 @@ Run the test:
 
 As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. Let's change that! 
 
-Click *Copy to Editor* to create the file.
+Click *Copy to Editor*.
 
 <pre class="file" data-filename="search/test_bs.py" data-target="replace">
 from binarySearch import *
