@@ -42,8 +42,9 @@ def findtwo():
 Run the test:
 `pytest`{{execute}}
 
+As you can see, no tests ran since PyTest had problem finding it. 
 
-If we make a test that is searching for a number that is not included in the array, 
+If we now make a test that is searching for a number that is not included in the array, 
 still asserting the result to be 0, it should fail. Try it:
 
 Click *Copy to Editor*.
@@ -86,3 +87,34 @@ Run the test and make sure it does not fail:
 These test are set up to succeed and fail since we *know* that the code is correct, 
 but what we usually want to test is *if* the code is correct. Feel free to change some parts in 
 the binarySearch file and run the tests to see if the change made the tests fail or not. 
+
+Click *Copy to Editor* to create the file.
+<pre class="file" data-filename="search/binarySearch.py" data-target="replace">
+# implementation from https://www.geeksforgeeks.org/binary-search/
+
+# Returns index of x in arr if present, else -1
+def bs (arr, l, r, x):
+
+	# Check base case
+	if r <= l:
+
+		mid = l + (r - l) // 2
+
+		# If element is present at the middle itself
+		if arr[mid] == x:
+			return mid
+		
+		# If element is smaller than mid, then it
+		# can only be present in left subarray
+		elif arr[mid] > x:
+			return bs(arr, l, mid-1, x)
+
+		# Else the element can only be present
+		# in right subarray
+		else:
+			return bs(arr, mid + 1, r, x)
+
+	else:
+		# Element is not present in the array
+		return -1
+</pre>
