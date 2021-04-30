@@ -9,7 +9,7 @@ Write a test that creates an array and calls binary search to find number 2,
 which is at index 0. Assert the result to be 0 since that is what we expect the results to be in order for the code to behave correctly.  
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+<pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
 
 def test_findtwo():
@@ -30,7 +30,7 @@ and execute the tests.
 See what happens if "test_" is removed from the test case:
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+<pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
 
 def findtwo():
@@ -51,7 +51,7 @@ still asserting the result to be 0, it should fail. Try it:
 
 Click *Copy to Editor*.
 
-<pre class="file" data-filename="search/test_bs.py" data-target="append">
+<pre class="file" data-filename="binary-search/search/test_bs.py" data-target="append">
 
 def test_findfive():
     arr = [ 2, 3, 4, 10, 40 ]
@@ -67,7 +67,7 @@ As expected, the test fails since 5 is not included in the array, and we asserte
 
 Click *Copy to Editor* to change that!
 
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+<pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
 
 def test_findtwo():
@@ -94,7 +94,7 @@ but what we usually want to test is *if* the code is correct. For example, if we
 something is wrong in the code. Try it:
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/binarySearchError.py" data-target="replace">
+<pre class="file" data-filename="binary-search/search/binarySearchError.py" data-target="replace">
 def bs (arr, l, r, x):
 
 	# Check base case
@@ -123,7 +123,7 @@ def bs (arr, l, r, x):
 
 Click *Copy to Editor* to add test cases. 
 
-<pre class="file" data-filename="search/test_bsError.py" data-target="replace">
+<pre class="file" data-filename="binary-search/search/test_bsError.py" data-target="replace">
 from binarySearchError import *
 
 def test_findtwoError():
