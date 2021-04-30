@@ -90,7 +90,7 @@ but what we usually want to test is *if* the code is correct. For example, if we
 something is wrong in the code. Try it:
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/binarySearch.py" data-target="replace">
+<pre class="file" data-filename="search/binarySearchError.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
 # Returns index of x in arr if present, else -1
@@ -120,7 +120,25 @@ def bs (arr, l, r, x):
 		return -1
 </pre>
 
-`pytest`{{execute}}
+Click *Copy to Editor* to change that!
+
+<pre class="file" data-filename="search/test_bsError.py" data-target="replace">
+from binarySearchError import *
+
+def test_findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+
+def test_findfive():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 5
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result == -1
+</pre>
+
+`python3 binarySearchError && pytest`{{execute}}
 
 Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
 
