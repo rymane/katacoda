@@ -60,3 +60,7 @@ Your travis dashboard will look something like this:
 If you scroll down you can se the job log with details about the test. If something fails, you can get the details here:
 
 ![Travis dashboard](assets/travis2.png)
+
+## The end
+Now you can continue to develop in this repo and every time you make a push, Travis
+will help you out by automatically test your code and let you know when something is wrong.
