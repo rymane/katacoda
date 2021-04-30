@@ -145,5 +145,5 @@ As you see, 3 tests succeeds, but the one named **test_findtwoError** fails, ind
 
 Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
 
-Add your new test file to your git repository: `git add search/test_bs.py` {{execute}}
+Add your new test file to your git repository: `git add search/test_bs.py`{{execute}}
 Commit the changes: `git commit -m "Add test file"`{{execute}}
