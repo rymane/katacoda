@@ -36,7 +36,9 @@ an orange dot while the build and tests are running, a green check mark if every
 
 ## Try it out
 Add your newly added file to your GitHub repository: `git add .travis.yml`{{execute}}
+
 Commit the changes: `git commit -m "added travis.yml file"`{{execute}}
+
 Push your .travis.yml file: `git push`{{execute}}
 
 Provide your username and password in order to push. 

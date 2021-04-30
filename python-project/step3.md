@@ -1,5 +1,4 @@
 It is now time to test the code to see that it works correctly and actually does what we want it to.
-We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is a Python framework used to write unit test easily.
 
 ## Install PyTest
 `python -m pip install pytest`{{execute}}
@@ -40,8 +39,7 @@ def findtwo():
     assert result  == 0
 </pre>
 
-Run the test:
-`pytest`{{execute}}
+Run the test: `pytest`{{execute}}
 
 As you can see, no tests ran since PyTest had problem finding it. 
 
@@ -60,8 +58,7 @@ def test_findfive():
     assert result == 0
 </pre>
 
-Run the test:
-`pytest`{{execute}}
+Run the test: `pytest`{{execute}}
 
 As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. 
 
@@ -140,10 +137,12 @@ def test_findfiveError():
 </pre>
 
 Run tests: `pytest`{{execute}}
+
 As you see, 3 tests succeeds, but the one named `test_findtwoError` fails, indicating that something is wrong in the code binarySearchError.
 
 
 Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
 
 Add your new test file to your git repository: `git add search/test_bs.py`{{execute}}
+
 Commit the changes: `git commit -m "Add test file"`{{execute}}
