@@ -85,8 +85,9 @@ Run the test and make sure it does not fail:
 `pytest`{{execute}}
 
 These test are set up to succeed and fail since we *know* that the code is correct, 
-but what we usually want to test is *if* the code is correct. Feel free to change some parts in 
-the binarySearch file and run the tests to see if the change made the tests fail or not. 
+but what we usually want to test is *if* the code is correct. For example, if we accidentally wrote "<=" instead of 
+">=" in the first if statement, the algorithm would not sort correctly. The first test should fail and indicate that 
+something is wrong in the code. Try it:
 
 Click *Copy to Editor* to create the file.
 <pre class="file" data-filename="search/binarySearch.py" data-target="replace">
@@ -118,3 +119,8 @@ def bs (arr, l, r, x):
 		# Element is not present in the array
 		return -1
 </pre>
+
+`pytest`{{execute}}
+
+Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
+
