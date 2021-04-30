@@ -38,7 +38,7 @@ touch .travis.yml
 ### Using GitHubs interface
 Change branch to "project-start" and click "add file" followed by "Create new file" and name the file  ".travis.yml".
 
-![GitHub interface](./assets/Git.png)
+![GitHub interface](assets/Git.png)
 ### Set up .travis.yml file
 Now, we add information about what language we are using for the project, and a script that makes Travis run the tests from the previous step with PyTests.
 
