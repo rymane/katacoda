@@ -5,7 +5,7 @@ We will implement binary search for demonstration purposes.
 Create a file with the code of binary search.
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="binary-search/search/binarySearch.py" data-target="replace">
+<pre class="file" data-filename="/root/binary-search/search/binarySearch.py" data-target="replace">
 # implementation from https://www.geeksforgeeks.org/binary-search/
 
 # Returns index of x in arr if present, else -1
