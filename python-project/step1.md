@@ -9,7 +9,7 @@ You fork the repo by clicking the link and then pressing the button right under 
 From your fork, press `Code` and select `HTTPS`. Copy the link.
 ![GitHub interface](assets/Clone.png)
 
-Go to `/root` and run the following command in the terminal:
+Run the following command in the terminal:
 
 `git clone <your clone link here>`
 
