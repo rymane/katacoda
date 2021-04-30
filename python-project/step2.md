@@ -22,7 +22,28 @@ def test_findtwo():
 Run the test:
 `pytest`{{execute}}
 
-Great! The test passed. If we make a test that is searching for a number that is not included in the array, 
+Great! The test passed. As you can see, the file name begins with "test" and the test case has a function name starting
+with  "test_" as well, following the naming convention we discussed in the introduction. Without this, PyTest would not find
+and execute the tests. 
+
+See what happens if "test_" is removed from the test case:
+
+Click *Copy to Editor* to create the file.
+<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+from binarySearch import *
+
+def findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+</pre>
+
+Run the test:
+`pytest`{{execute}}
+
+
+If we make a test that is searching for a number that is not included in the array, 
 still asserting the result to be 0, it should fail. Try it:
 
 Click *Copy to Editor*.
