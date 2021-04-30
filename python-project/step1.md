@@ -1,52 +1,21 @@
-We begin by setting up a simple Python project. 
-We will implement binary search for demonstration purposes.
+Before we begin this tutorial you should fork and clone the repo for this tutorial. 
+Follow the instructions below. 
 
-## Implement Binary search
-Start by making a folder to place the project in.
+## Fork Github repo
+Start by forking [this repo](https://github.com/rymane/binary-search/tree/project-start).
+You fork the repo by clicking the link and then pressing the button right under your profile picture saying "fork". 
 
-`mkdir search && cd search`{{execute}}
+## Clone your repo
+From your fork, press `Code` and select `HTTPS`. Copy the link.
+![GitHub interface](assets/Clone.png)
 
-Create a file with the code of binary search.
+Go to `/root` and run the following command in the terminal:
 
-Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/binarySearch.py" data-target="replace">
-# implementation from https://www.geeksforgeeks.org/binary-search/
+`git clone <your clone link here>`
 
-# Returns index of x in arr if present, else -1
-def bs (arr, l, r, x):
+Move into the repository: `cd binary-search`{{execute}}
 
-	# Check base case
-	if r >= l:
-
-		mid = l + (r - l) // 2
-
-		# If element is present at the middle itself
-		if arr[mid] == x:
-			return mid
-		
-		# If element is smaller than mid, then it
-		# can only be present in left subarray
-		elif arr[mid] > x:
-			return bs(arr, l, mid-1, x)
-
-		# Else the element can only be present
-		# in right subarray
-		else:
-			return bs(arr, mid + 1, r, x)
-
-	else:
-		# Element is not present in the array
-		return -1
-</pre>
-
-Binary search takes an array, a start, an end and the number to search for as an input. 
-It returns the index where the number is found if it exists in the array, otherwise it returns -1. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
-
-Run the code and see that it compiles:
-
-`python3 binarySearch.py`{{execute}}
-
-Excellent! 
+Switch branch to "project-start": `git checkout project-start`{{execute}}
 
 
-
+Great! Now we are ready to start the tutorial. 

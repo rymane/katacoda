@@ -1,104 +1,18 @@
-It is now time to test the code to see that it works correctly and actually does what we want it to.
-We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is a Python framework used to write unit test easily.
+We begin by setting up a simple Python project. 
+We will implement binary search for demonstration purposes.
 
-## Install PyTest
-`python -m pip install pytest`{{execute}}
-
-## Set up our first test
-Write a test that creates an array and calls binary search to find number 2, 
-which is at index 0. Assert the result to be 0 since that is what we expect the results to be in order for the code to behave correctly.  
+## Implement Binary search
+Create a file with the code of binary search.
 
 Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
-from binarySearch import *
+<pre class="file" data-filename="search/binarySearch.py" data-target="replace">
+# implementation from https://www.geeksforgeeks.org/binary-search/
 
-def test_findtwo():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 2
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result  == 0
-</pre>
-
-Run the test:
-`pytest`{{execute}}
-
-Great! The test passed. As you can see, the file name begins with "test" and the test case has a function name starting
-with  "test_" as well, following the naming convention we discussed in the introduction. Without this, PyTest would not find
-and execute the tests. 
-
-## Tests named wrong
-See what happens if "test_" is removed from the test case:
-
-Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
-from binarySearch import *
-
-def findtwo():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 2
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result  == 0
-</pre>
-
-Run the test:
-`pytest`{{execute}}
-
-As you can see, no tests ran since PyTest had problem finding it. 
-
-## Failing test
-If we now make a test that is searching for a number that is not included in the array, 
-still asserting the result to be 0, it should fail. Try it:
-
-Click *Copy to Editor*.
-
-<pre class="file" data-filename="search/test_bs.py" data-target="append">
-
-def test_findfive():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 5
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result == 0
-</pre>
-
-Run the test:
-`pytest`{{execute}}
-
-As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. 
-
-Click *Copy to Editor* to change that!
-
-<pre class="file" data-filename="search/test_bs.py" data-target="replace">
-from binarySearch import *
-
-def test_findtwo():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 2
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result  == 0
-
-def test_findfive():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 5
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result == -1
-</pre>
-
-Run the test and make sure it does not fail:
-`pytest`{{execute}}
-
-## Tests with error in binary search
-
-The previous tests were set up to succeed and fail since we *know* that the code is correct, 
-but what we usually want to test is *if* the code is correct. For example, if we accidentally wrote "<=" instead of 
-">=" in the first if statement, the algorithm would not search correctly. The first test should fail and indicate that 
-something is wrong in the code. Try it:
-
-Click *Copy to Editor* to create the file.
-<pre class="file" data-filename="search/binarySearchError.py" data-target="replace">
+# Returns index of x in arr if present, else -1
 def bs (arr, l, r, x):
 
 	# Check base case
-	if r <= l:
+	if r >= l:
 
 		mid = l + (r - l) // 2
 
@@ -121,27 +35,14 @@ def bs (arr, l, r, x):
 		return -1
 </pre>
 
-Click *Copy to Editor* to add test cases. 
+Binary search takes an array, a start, an end and the number to search for as an input. 
+It returns the index where the number is found if it exists in the array, otherwise it returns -1. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
 
-<pre class="file" data-filename="search/test_bsError.py" data-target="replace">
-from binarySearchError import *
+Run the code and see that it compiles:
 
-def test_findtwoError():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 2
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result  == 0
+`python3 binarySearch.py`{{execute}}
 
-def test_findfiveError():
-    arr = [ 2, 3, 4, 10, 40 ]
-    x = 5
-    result = bs(arr, 0, len(arr)-1, x)
-    assert result == -1
-</pre>
-
-`python3 binarySearchError.py && pytest`{{execute}}
-As you see, 3 tests succeeds, but the one named **test_findtwoError** fails, indicating that something is wrong in the code binarySearchError.
+Excellent! 
 
 
-Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
 

@@ -5,16 +5,20 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Set up your Python project",
+        "title": "Step 1 - Before we begin",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 - Create tests",
+        "title": "Step 2 - Set up your Python project",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Travis CI",
+        "title": "Step 3 - Create tests",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - Travis CI",
+        "text": "step4.md"
       }
     ],
     "intro": {

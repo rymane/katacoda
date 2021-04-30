@@ -1,58 +1,147 @@
-This far we have made a small Python project and written unit tests for it.
-Now it is time to set up [Travis CI](https://www.travis-ci.com), which is
-a service for continuous integrations, used to build and test our code automatically on every push.  
+It is now time to test the code to see that it works correctly and actually does what we want it to.
+We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is a Python framework used to write unit test easily.
 
-## Fork Github repo
-Start by forking [this repo](https://github.com/rymane/binary-search/tree/project-start) to use in this step.
-You fork the repo by clicking the link and then pressing the button right under your profile picture saying "fork". 
+## Install PyTest
+`python -m pip install pytest`{{execute}}
 
-## Connect Travis with your GitHub account
-First, you want to connect Travis CI to your GitHub account. 
-1. Go to [Travis CI](https://www.travis-ci.com) and select **Sign up with GitHub**
-2. Accept the authorization on your screen.
-3. Either click **Activate all repositories using GitHub Apps** or go to your profile by pressing
-the **profile picture**, then click **Settings**, and the green **Activate** button, and select the repositories you want to use with Travis CI.
+## Set up our first test
+Write a test that creates an array and calls binary search to find number 2, 
+which is at index 0. Assert the result to be 0 since that is what we expect the results to be in order for the code to behave correctly.  
 
-## Clone your repo
-From your fork, press `Code` and select `HTTPS`. Copy the link. 
-![GitHub interface](assets/Clone.png)
+Click *Copy to Editor* to create the file.
+<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+from binarySearch import *
 
-Go to `/root` and run the following command in the terminal:
+def test_findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+</pre>
 
-`git clone <your clone link>`
+Run the test:
+`pytest`{{execute}}
 
-## Configure Travis
-In order for Travis CI to work, the GitHub repo has to have a file named .travis.yml located in the root of the repository. 
-Follow the instructions below to create the .travis.yml file.
- 
-Switch branch to "project-start": `checkout project-start` {{execute}}
+Great! The test passed. As you can see, the file name begins with "test" and the test case has a function name starting
+with  "test_" as well, following the naming convention we discussed in the introduction. Without this, PyTest would not find
+and execute the tests. 
 
-Create the travis file: touch `.travis.yml`{{execute}}
+## Tests named wrong
+See what happens if "test_" is removed from the test case:
 
-### Set up .travis.yml file
-Now, we add information about what language we are using for the project, and a script that makes Travis run the tests from the previous step with PyTests.
+Click *Copy to Editor* to create the file.
+<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+from binarySearch import *
+
+def findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+</pre>
+
+Run the test:
+`pytest`{{execute}}
+
+As you can see, no tests ran since PyTest had problem finding it. 
+
+## Failing test
+If we now make a test that is searching for a number that is not included in the array, 
+still asserting the result to be 0, it should fail. Try it:
 
 Click *Copy to Editor*.
 
-<pre class="file" data-filename=".travis.yml" data-target="replace">
-language: python
-script: 
-  - pytest
+<pre class="file" data-filename="search/test_bs.py" data-target="append">
+
+def test_findfive():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 5
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result == 0
 </pre>
 
-The .travis.yml file will tell Travis which language is used together with the desired building and testing environment. If any dependencies has
-to be installed before building the software, this is stated in the .travis.yml file as well. You can read more about the .travis.yml file [here](https://docs.travis-ci.com/user/tutorial/).
+Run the test:
+`pytest`{{execute}}
 
-Since our project is small and does not have any dependencies, the above is everything needed in the .travis.yml file.
-If this file was pushed to GitHub together with binarySearch and the tests, then for every push Travis
-would run our code and test it automatically with our specified tests. For each commit, Travis will show
-an orange dot while the build and tests are running, a green check mark if everything succeeded, and a red cross if something failed.
+As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. 
 
-## Try it out
-Add your newly added file to your GitHub repository: `git add .travis.yml` {{execute}}
-Commit the changes: `git commit -m "added travis.yml file"`{{execute}}
-Push your .travis.yml file: `git push`{{execute}}
+Click *Copy to Editor* to change that!
 
-Once that is done you can start making small changes in your repo. You can try editing the README 
-or make small changes to binary search. Push your changes and see how Travis behaves. You can also look at the 
-build in your Travis dashboard for more information. 
+<pre class="file" data-filename="search/test_bs.py" data-target="replace">
+from binarySearch import *
+
+def test_findtwo():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+
+def test_findfive():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 5
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result == -1
+</pre>
+
+Run the test and make sure it does not fail:
+`pytest`{{execute}}
+
+## Tests with error in binary search
+
+The previous tests were set up to succeed and fail since we *know* that the code is correct, 
+but what we usually want to test is *if* the code is correct. For example, if we accidentally wrote "<=" instead of 
+">=" in the first if statement, the algorithm would not search correctly. The first test should fail and indicate that 
+something is wrong in the code. Try it:
+
+Click *Copy to Editor* to create the file.
+<pre class="file" data-filename="search/binarySearchError.py" data-target="replace">
+def bs (arr, l, r, x):
+
+	# Check base case
+	if r <= l:
+
+		mid = l + (r - l) // 2
+
+		# If element is present at the middle itself
+		if arr[mid] == x:
+			return mid
+		
+		# If element is smaller than mid, then it
+		# can only be present in left subarray
+		elif arr[mid] > x:
+			return bs(arr, l, mid-1, x)
+
+		# Else the element can only be present
+		# in right subarray
+		else:
+			return bs(arr, mid + 1, r, x)
+
+	else:
+		# Element is not present in the array
+		return -1
+</pre>
+
+Click *Copy to Editor* to add test cases. 
+
+<pre class="file" data-filename="search/test_bsError.py" data-target="replace">
+from binarySearchError import *
+
+def test_findtwoError():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 2
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result  == 0
+
+def test_findfiveError():
+    arr = [ 2, 3, 4, 10, 40 ]
+    x = 5
+    result = bs(arr, 0, len(arr)-1, x)
+    assert result == -1
+</pre>
+
+`python3 binarySearchError.py && pytest`{{execute}}
+As you see, 3 tests succeeds, but the one named **test_findtwoError** fails, indicating that something is wrong in the code binarySearchError.
+
+
+Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
+
