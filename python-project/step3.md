@@ -8,7 +8,7 @@ We will test our code with [PyTest](https://docs.pytest.org/en/6.2.x/) which is 
 Write a test that creates an array and calls binary search to find number 2, 
 which is at index 0. Assert the result to be 0 since that is what we expect the results to be in order for the code to behave correctly.  
 
-Click *Copy to Editor* to create the file.
+Click `Copy to Editor` to create the file.
 <pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
 
@@ -29,7 +29,7 @@ and execute the tests.
 ## Tests named wrong
 See what happens if "test_" is removed from the test case:
 
-Click *Copy to Editor* to create the file.
+Click `Copy to Editor` to create the file.
 <pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
 
@@ -49,7 +49,7 @@ As you can see, no tests ran since PyTest had problem finding it.
 If we now make a test that is searching for a number that is not included in the array, 
 still asserting the result to be 0, it should fail. Try it:
 
-Click *Copy to Editor*.
+Click `Copy to Editor`
 
 <pre class="file" data-filename="binary-search/search/test_bs.py" data-target="append">
 
@@ -65,7 +65,7 @@ Run the test:
 
 As expected, the test fails since 5 is not included in the array, and we asserted it to be at index 0. 
 
-Click *Copy to Editor* to change that!
+Click `Copy to Editor` to change that!
 
 <pre class="file" data-filename="binary-search/search/test_bs.py" data-target="replace">
 from binarySearch import *
@@ -93,7 +93,7 @@ but what we usually want to test is *if* the code is correct. For example, if we
 ">=" in the first if statement, the algorithm would not search correctly. The first test should fail and indicate that 
 something is wrong in the code. Try it:
 
-Click *Copy to Editor* to create the file.
+Click `Copy to Editor` to create the file.
 <pre class="file" data-filename="binary-search/search/binarySearchError.py" data-target="replace">
 def bs (arr, l, r, x):
 
@@ -121,7 +121,7 @@ def bs (arr, l, r, x):
 		return -1
 </pre>
 
-Click *Copy to Editor* to add test cases. 
+Click `Copy to Editor` to add test cases. 
 
 <pre class="file" data-filename="binary-search/search/test_bsError.py" data-target="replace">
 from binarySearchError import *
@@ -140,7 +140,7 @@ def test_findfiveError():
 </pre>
 
 Run tests: `pytest`{{execute}}
-As you see, 3 tests succeeds, but the one named **test_findtwoError** fails, indicating that something is wrong in the code binarySearchError.
+As you see, 3 tests succeeds, but the one named `test_findtwoError` fails, indicating that something is wrong in the code binarySearchError.
 
 
 Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.

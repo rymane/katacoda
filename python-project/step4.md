@@ -18,7 +18,7 @@ Create the travis file: `touch .travis.yml`{{execute}}
 ### Set up .travis.yml file
 Now, we add information about what language we are using for the project, and a script that makes Travis run the tests from the previous step with PyTests.
 
-Click *Copy to Editor*.
+Click `Copy to Editor`.
 
 <pre class="file" data-filename="binary-search/.travis.yml" data-target="replace">
 language: python
@@ -41,18 +41,22 @@ Push your .travis.yml file: `git push`{{execute}}
 
 Provide your username and password in order to push. 
 
-Now go to the fork in browser and see how travis is building. It should look like this:
+Now go to the fork in your browser and change branch to `project-start` and see how travis is building. It should look like this:
 
 ![Travis running](assets/running.png)
 
-After some time, when travis is done it should look something like this:
+After some time, when travis is done building it should look something like this:
+
+(You can refresh the page to see the result faster)
+
 ![Travis done](assets/done.png)
 
-Once that is done you can start making small changes in your repo. You can try editing the README 
-or make small changes to binary search. Push your changes and see how Travis behaves. You can also look at the 
-build in your Travis dashboard for more information. 
+You can also look at the build in your Travis dashboard for more information. 
 
 Your travis dashboard will look something like this:
+
 ![Travis dashboard](assets/travis1.png)
-And if you scroll down you can se the job log with details about the test. If something fails, you can get the details here:
+
+If you scroll down you can se the job log with details about the test. If something fails, you can get the details here:
+
 ![Travis dashboard](assets/travis2.png)
