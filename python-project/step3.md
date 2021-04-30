@@ -13,38 +13,28 @@ First, you want to connect Travis CI to your GitHub account.
 3. Either click **Activate all repositories using GitHub Apps** or go to your profile by pressing
 the **profile picture**, then click **Settings**, and the green **Activate** button, and select the repositories you want to use with Travis CI.
 
+## Clone your repo
+From your fork, press `Code` and select `HTTPS`. Copy the link. 
+![GitHub interface](assets/Clone.png)
+
+Go to `/root` and run the following command in the terminal:
+
+`git clone <your clone link>`
+
 ## Configure Travis
 In order for Travis CI to work, the GitHub repo has to have a file named .travis.yml located in the root of the repository. 
-Follow the instructions below to create the .travis.yml file via your terminal or through Githubs interface from your browser.
+Follow the instructions below to create the .travis.yml file.
+ 
+Switch branch to "project-start": `checkout project-start` {{execute}}
 
-### Using terminal
-Begin by cloning the repo and make sure you are at located at /root. 
-Switch branch to "project-start" by running the following command in your terminal:
+Create the travis file: touch `.travis.yml`{{execute}}
 
-Click *Copy to Clipboard* to copy the code.
-
-<pre class="file" data-target="clipboard">
-checkout project-start
-</pre>
-
-Now, run the following command in your terminal to create the .travis file. 
-
-Click *Copy to Clipboard* to copy the code.
-
-<pre class="file" data-target="clipboard">
-touch .travis.yml
-</pre>
-
-### Using GitHubs interface
-Change branch to "project-start" and click "add file" followed by "Create new file" and name the file  ".travis.yml".
-
-![GitHub interface](assets/Git.png)
 ### Set up .travis.yml file
 Now, we add information about what language we are using for the project, and a script that makes Travis run the tests from the previous step with PyTests.
 
-Click *Copy To Clipboard* and paste into your .travis.yml file. 
+Click *Copy to Editor*.
 
-<pre class="file" data-target="clipboard">
+<pre class="file" data-filename=".travis.yml" data-target="replace">
 language: python
 script: 
   - pytest
@@ -59,7 +49,10 @@ would run our code and test it automatically with our specified tests. For each 
 an orange dot while the build and tests are running, a green check mark if everything succeeded, and a red cross if something failed.
 
 ## Try it out
-Push your .travis.yml file or press **save file** with the GitHub interface.
+Add your newly added file to your GitHub repository: `git add .travis.yml` {{execute}}
+Commit the changes: `git commit -m "added travis.yml file"`{{execute}}
+Push your .travis.yml file: `git push`{{execute}}
+
 Once that is done you can start making small changes in your repo. You can try editing the README 
 or make small changes to binary search. Push your changes and see how Travis behaves. You can also look at the 
 build in your Travis dashboard for more information. 
