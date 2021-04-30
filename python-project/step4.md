@@ -39,9 +39,20 @@ Add your newly added file to your GitHub repository: `git add .travis.yml`{{exec
 Commit the changes: `git commit -m "added travis.yml file"`{{execute}}
 Push your .travis.yml file: `git push`{{execute}}
 
+Provide your username and password in order to push. 
+
 Now go to the fork in browser and see how travis is building. It should look like this:
 
+![Travis running](assets/running.png)
+
+After some time, when travis is done it should look something like this:
+![Travis done](assets/done.png)
 
 Once that is done you can start making small changes in your repo. You can try editing the README 
 or make small changes to binary search. Push your changes and see how Travis behaves. You can also look at the 
 build in your Travis dashboard for more information. 
+
+Your travis dashboard will look something like this:
+![Travis dashboard](assets/travis1.png)
+And if you scroll down you can se the job log with details about the test. If something fails, you can get the details here:
+![Travis dashboard](assets/travis2.png)

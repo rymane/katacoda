@@ -139,9 +139,11 @@ def test_findfiveError():
     assert result == -1
 </pre>
 
-`python3 binarySearchError.py && pytest`{{execute}}
+Run tests: `pytest`{{execute}}
 As you see, 3 tests succeeds, but the one named **test_findtwoError** fails, indicating that something is wrong in the code binarySearchError.
 
 
 Feel free to change some parts in the binarySearch file and run the tests to see if the change made the tests fail or not.
 
+Add your new test file to your git repository: `git add search/test_bs.py` {{execute}}
+Commit the changes: `git commit -m "Add test file"`{{execute}}

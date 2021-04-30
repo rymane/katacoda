@@ -38,11 +38,5 @@ def bs (arr, l, r, x):
 Binary search takes an array, a start, an end and the number to search for as an input. 
 It returns the index where the number is found if it exists in the array, otherwise it returns -1. You can read more about binary search [here](https://www.geeksforgeeks.org/binary-search/).
 
-Run the code and see that it compiles:
-
-`python3 binarySearch.py`{{execute}}
-
-Excellent! 
-
-
-
+Add your new file to your git repository: `git add search/binarySearch.py` {{execute}}
+Commit the changes: `git commit -m "Add binary Search"`{{execute}}
