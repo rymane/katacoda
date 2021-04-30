@@ -39,7 +39,7 @@ Add your newly added file to your GitHub repository: `git add .travis.yml`{{exec
 
 Commit the changes: `git commit -m "added travis.yml file"`{{execute}}
 
-Push your .travis.yml file: `git push`{{execute}}
+Push your files: `git push`{{execute}}
 
 Provide your username and password in order to push. 
 
